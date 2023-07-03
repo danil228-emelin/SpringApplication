@@ -11,7 +11,7 @@ public class Credential {
     @Id
     private int id;
     private String name;
-    private BigDecimal money;
+    private BigDecimal money=BigDecimal.valueOf(0);
 
     public void subtract(BigDecimal cash) {
         if (money.subtract(cash).compareTo(BigDecimal.valueOf(0)) < 0) {

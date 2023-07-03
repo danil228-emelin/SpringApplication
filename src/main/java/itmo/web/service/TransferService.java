@@ -33,7 +33,6 @@ public class TransferService {
             throw new NoAccountException(idReceiver);
         }
         sender.subtract(money);
-
         receiver.addMoney(money);
         repository.changeMoney(sender.getMoney(),idSender);
         repository.changeMoney(receiver.getMoney(),idReceiver);

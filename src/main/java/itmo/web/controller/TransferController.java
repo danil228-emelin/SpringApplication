@@ -17,6 +17,7 @@ public class TransferController {
     public ResponseEntity<String> transferMoney(@RequestBody TransferRequest transferRequest) {
         transferService.transferMoney(transferRequest.getIdSender(), transferRequest.getIdReceiver(), transferRequest.getMoney());
         return ResponseEntity.accepted().body("transfer succeed");
+
     }
 
 
